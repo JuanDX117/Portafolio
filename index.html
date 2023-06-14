@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portafolio web</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+   
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
+
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Hola! Soy <strong>Juan Orjuela</strong> <br/> Desarrollador  <strong>Javascript</strong> con <br> pasión por la <strong>programacion</strong>
+        </h1>
+        <img class="hero-image" src="images/yo.jpg" width="500" height="300" alt="imagen principal del sitio"> 
+      </div>
+    </section>
+
+    <section id="portafolio" class="portfolio">
+      <div class="container">
+        <h2>Portafolio Web</h2>
+
+      <article class="project">
+        <div class="project-details">
+          <h3 class="project-title">Mi Experiencia</h3>
+          <p class="project-description"> He tenido el privilegio de participar en emocionantes proyectos de programación que han desafiado mis habilidades y me han permitido crecer profesionalmente. Desde la creación de un innovador hotel que revolucionó la forma en que los huéspedes interactúan con la tecnología, hasta el desarrollo de un parqueadero inteligente que optimiza el tiempo y la eficiencia de los usuarios, he demostrado mi capacidad para convertir ideas en realidades funcionales.
+            Además, he tenido la oportunidad de involucrarme en el desarrollo de una cautivadora aplicación web de turismo, donde pude combinar mi pasión por la tecnología con mi amor por viajar, creando una plataforma intuitiva que brinda experiencias inolvidables a los usuarios.   
+          </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" width="500" src="images/program.jpeg" alt="programacion">
+        </figure>
+      </article>
+
+      <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Habilidades Técnicas:
+            </h3>
+            <p class="project-description">
+              CSS, HTML: Experiencia en la creación de diseños atractivos y responsivos, y en la estructuración de contenido web.
+              <br>PHP: Desarrollo de aplicaciones web, manipulación de bases de datos y creación de soluciones robustas. <br>
+              Python: Amplio conocimiento y uso de Python en diversas aplicaciones.<br>
+              Java: Desarrollo de aplicaciones con Java, incluyendo estructuras de datos y interfaces de usuario interactivas.<br>
+              JavaScript: Experiencia en el desarrollo de aplicaciones web interactivas y dinámicas.
+            </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/lenguajes.png" alt="lenguajes">
+          </figure>
+        </article>
+      </div>
+      
+    </section>
+    
+      
+    </section>
+    <section id="contacto" class="contact">
+      <div class="container">
+        <form action="/suscripcion/" class="form-email">
+          <h3>¿Creamos algo juntos?</h3>
+          <input type="text" placeholder="Déjame tu email" id="email">
+          <button>Enviar</button>
+        </form>
+        <div class="social">
+          <a href="https://twitter.com/" class="social-link twitter"></a>
+          <a href="https://facebook.com/" class="social-link facebook"></a>
+          <a href="https://github.com/" class="social-link github"></a>
+          <a href="https://instagram.com/" class="social-link instagram"></a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      
+    </footer>
+    <script>
+      
+      const ipad = window.matchMedia('screen and (max-inline-size: 767px)')
+      const menu = document.querySelector('.menu');
+      
+      const burgerButton = document.querySelector('#burger-menu');
+    
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
